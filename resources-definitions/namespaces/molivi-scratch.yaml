@@ -1,0 +1,9 @@
+# Defines a namespace called molivi-scratch with automatic istio-sidecar injection enabled. Notice that for the sidecar 
+# to be actually automatically injected the k8s master must have mutating and validating admission webhooks enabled (this
+# requires k8s v1.9 or higher).
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: molivi-scratch
+  labels:
+    istio-injection: enabled
